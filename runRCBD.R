@@ -4,8 +4,13 @@
 # Only required argument: f (no of levels of the factor or treatment)
 
 # R VERSION: 2.15.1
+<<<<<<< HEAD
 options(warn = -1) #no warnings
 suppressPackageStartupMessages(library(PBTools)) #no start-up messages
+=======
+options(warn = -1) 
+suppressPackageStartupMessages(library(PBTools))
+>>>>>>> 772459fb1e8e60e3f51134280e4ffae5bd4fe291
 suppressPackageStartupMessages(library(optparse))
 
 option_list = list(
@@ -30,7 +35,11 @@ opt = parse_args(opt_parser)
 
 # supply at least the number of treatment levels 
 if (is.null(opt$nTrmts)){
+<<<<<<< HEAD
   print_help(opt_parser) #display arguments with descriptions if input
+=======
+  print_help(opt_parser)
+>>>>>>> 772459fb1e8e60e3f51134280e4ffae5bd4fe291
   stop("Please specify the number of levels of the factor or treatment. \n", call. = FALSE)
 }
 
