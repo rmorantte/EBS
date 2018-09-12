@@ -1,6 +1,6 @@
 # FILE: runRCBD.R - used to generate randomization and layout using RCBD
 # Run in the command line, with arguments, for example:
-# $ Rscript runRCBD.R -f 6 -b 3 -t 2
+# $ Rscript runRCBD.R -f 6 -b 3 -t 2 -r 3 -p 3 -s FALSE -o testOut
 # Only required argument: f (no of levels of the factor or treatment)
 
 # R VERSION: 2.15.1
@@ -17,7 +17,7 @@ option_list = list(
               help = "Number of trials", metavar = "Number_of_Trials"),
   make_option(c("-r", "--nFRows"), type = "integer", default = 1, 
               help = "Overall number of rows of experimental units", metavar = "Number_of_Field_Rows"),
-  make_option(c("-rr", "--nRowsPerRep"), type = "integer", default = 1, 
+  make_option(c("-p", "--nRowsPerRep"), type = "integer", default = 1, 
               help = "Number of rows per replication", metavar = "no_of_Rows_Per_Rep"),
   make_option(c("-s", "--serpentine"), type = "logical", default = FALSE, 
               help = "Are experimental units arranged in serpentine from left to right?", metavar = "Is_Serpentine"),
